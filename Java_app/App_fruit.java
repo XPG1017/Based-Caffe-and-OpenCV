@@ -108,7 +108,7 @@ import java.awt.GridLayout;
         this.getLayeredPane().add(label, new Integer(Integer.MIN_VALUE));  
 		
 			
-	    item4.addActionListener(new ActionListener() {
+	item4.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0){
                  FontUIResource fontRes = new javax.swing.plaf.FontUIResource(font1);
@@ -333,32 +333,32 @@ import java.awt.GridLayout;
     public void Jpgset()  throws Exception{
         String str=String.format("%s",fileChooser.getSelectedFile());   
         System.out.println(str);    
-        File _file = new File(str); // 读入文件  
+       File _file = new File(str); // 读入文件  
 
-        Image src = javax.imageio.ImageIO.read(_file); // 构造Image对象  
-        int width = src.getWidth(null); // 得到源图宽  
-        int height = src.getHeight(null); // 得到源图长  
+       Image src = javax.imageio.ImageIO.read(_file); // 构造Image对象  
+       int width = src.getWidth(null); // 得到源图宽  
+       int height = src.getHeight(null); // 得到源图长  
         
-        //需要长度  
-        int newwidth =width ;
-        int newheight = width ;
-        BufferedImage image = new BufferedImage(newwidth, newheight,  
-        BufferedImage.TYPE_INT_RGB);  
-        Graphics graphics = image.getGraphics();  
+       //需要长度  
+       int newwidth =width ;
+       int newheight = width ;
+       BufferedImage image = new BufferedImage(newwidth, newheight,  
+         BufferedImage.TYPE_INT_RGB);  
+       Graphics graphics = image.getGraphics();  
         
               
-        graphics.drawImage(src, 0, 0, newwidth, newheight, null); 
-        // 画边框,在drawImage后面，下面代码给图片加上两个像素的白边     
-        graphics.setColor(Color.GREEN);     
-        graphics.drawRect(0, 0, newwidth - 1, newheight - 1);  
-        graphics.drawRect(1, 1, newwidth - 1, newheight - 1);  
-        graphics.drawRect(0, 0, newwidth - 2, newheight - 2);  
+       graphics.drawImage(src, 0, 0, newwidth, newheight, null); // 绘制缩小后的图  
+      // 画边框,在drawImage后面，下面代码给图片加上两个像素的白边     
+       graphics.setColor(Color.GREEN);     
+       graphics.drawRect(0, 0, newwidth - 1, newheight - 1);  
+       graphics.drawRect(1, 1, newwidth - 1, newheight - 1);  
+       graphics.drawRect(0, 0, newwidth - 2, newheight - 2);  
 
         String formatName = str.substring(str.lastIndexOf(".") + 1);
-        //FileOutputStream out = new FileOutputStream(dstName);
-        //JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
-        //encoder.encode(dstImage);                            //老版本
-        ImageIO.write(image, /*"GIF"*/ formatName /* format desired */ , new File(str) /* target */ );
+         //FileOutputStream out = new FileOutputStream(dstName);
+         //JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
+         //encoder.encode(dstImage);                            //老版本
+         ImageIO.write(image, /*"GIF"*/ formatName /* format desired */ , new File(str) /* target */ );
         
        
     }  
@@ -386,22 +386,24 @@ import java.awt.GridLayout;
 		
 	}
 }
-class Second {
+ class Second {
 JDialog jDialog1=null; //创建一个空的对话框对象
 Second(JFrame jFrame){
 /* 初始化jDialog1
-* 指定对话框的拥有者为jFrame,标题为"About",当对话框为可视时,其他构件不能
+* 指定对话框的拥有者为jFrame,标题为"Dialog",当对话框为可视时,其他构件不能
 * 接受用户的输入(静态对话框) */
 jDialog1=new JDialog(jFrame,"About",true);
+//创建一个按钮对象,该对象被添加到对话框中
 JLabel j1=new JLabel("Version:2.0");
-JLabel j2=new JLabel("You can find more help in my github");
+JLabel j2=new JLabel("You can find more help in my github XPG1017");
+//将"关闭"按钮对象添加至对话框容器中
 jDialog1.getContentPane().add(j1);
 jDialog1.getContentPane().add(j2);
 /* 设置对话框的初始大小 */
-jDialog1.setSize(400,200);
+jDialog1.setSize(450,200);
 /* 设置对话框初始显示在屏幕当中的位置 */
 jDialog1.setLocation(450,450);
-/* 设置对话框为可见 */
+/* 设置对话框为可见(前提是生成了HelloDialog对象) */
 jDialog1.setLayout(new GridLayout(3,1));
 jDialog1.setVisible(true);
 }
