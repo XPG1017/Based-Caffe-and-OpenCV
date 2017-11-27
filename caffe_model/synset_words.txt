@@ -1,0 +1,10 @@
+banana###
+apple####
+grape####
+pineapple
+caomei###
+pear#####
+xigua####
+orage####
+taozi####
+plum#####
