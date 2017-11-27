@@ -3,5 +3,5 @@
 
 <二>基于OpenCV的水果腐烂检测
 
-<三>基于java的基于上述功能的APP,liux下
+<三>基于java的基于上述功能的APP based on linux
 
