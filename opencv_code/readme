@@ -1,7 +1,13 @@
-水果腐烂检测
+Detection of fruit decay
+
 Udates:
-1.使用椭圆形的7x7的卷积核
-2.去除在检测苹果时出现的2个误检测区域
-3.去除了图片中干扰检测的阴影
-4.使用中值滤波器消除了图片合成后的椒盐噪声
-5.腐烂检测范围精准度得到了很大提升
+
+1. use the convolution kernel of elliptical 7x7
+
+2. removal of 2 misdetection regions in the detection of apple
+
+3. remove the shadow of the interference detection in the picture
+
+4. using median filter to eliminate salt and pepper noise after image synthesis
+
+5. the accuracy of the range of decay detection has been greatly improved

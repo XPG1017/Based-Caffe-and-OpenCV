@@ -1,9 +1,15 @@
+Updates:
 
-UPdates:
-1.迭代6000次的caffeMOdel
-2.模型精度达到80%
-3.10种常见水果的识别,苹果,香蕉,挑子,菠萝,草莓,李子，梨子,葡萄,西瓜
-4.对水果上的果蝇进行检测
-5.果蝇识别率达到90%
-6.基于java的应用程序
-使用的前提是装好caffe
+1. iteration 6000 times caffeMOdel
+
+2. The precision of  model reaches 80%
+
+3. 10 kinds of common fruit identification, apple, banana, pineapple, strawberries, peaches, plums, pears, grapes, watermelon
+
+4. tests on fruit flies
+
+5. The recognition rate of Drosophila was 90%
+
+6. Java based applications
+
+The premise is to install caffe

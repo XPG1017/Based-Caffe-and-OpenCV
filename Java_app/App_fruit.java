@@ -94,7 +94,7 @@ import java.awt.GridLayout;
 		add(lab);
         
         //背景图片的路径。（相对路径或者绝对路径。本例图片放于"java项目名"的文件下）  
-        String path = "456.jpg";  
+        String path = "background.jpg";  
         // 背景图片  
         ImageIcon background = new ImageIcon(path);  
         // 把背景图片显示在一个标签里面  
@@ -390,20 +390,18 @@ import java.awt.GridLayout;
 JDialog jDialog1=null; //创建一个空的对话框对象
 Second(JFrame jFrame){
 /* 初始化jDialog1
-* 指定对话框的拥有者为jFrame,标题为"Dialog",当对话框为可视时,其他构件不能
+* 指定对话框的拥有者为jFrame,标题为"About",当对话框为可视时,其他构件不能
 * 接受用户的输入(静态对话框) */
 jDialog1=new JDialog(jFrame,"About",true);
-//创建一个按钮对象,该对象被添加到对话框中
 JLabel j1=new JLabel("Version:2.0");
 JLabel j2=new JLabel("You can find more help in my github XPG1017");
-//将"关闭"按钮对象添加至对话框容器中
 jDialog1.getContentPane().add(j1);
 jDialog1.getContentPane().add(j2);
 /* 设置对话框的初始大小 */
 jDialog1.setSize(450,200);
 /* 设置对话框初始显示在屏幕当中的位置 */
 jDialog1.setLocation(450,450);
-/* 设置对话框为可见(前提是生成了HelloDialog对象) */
+/* 设置对话框为可见 */
 jDialog1.setLayout(new GridLayout(3,1));
 jDialog1.setVisible(true);
 }
